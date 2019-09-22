@@ -8,8 +8,10 @@ from form import views
 
 
 urlpatterns = [
-    url(r'^nuevo$' ,views.vista_formulario.as_view(),name='formulario'),
-    url(r'^admin/',admin.site.urls),
+##    url(r'^nuevo$' ,views.vista_formulario.as_view(),name='formulario'),
+##    url(r'^admin/',admin.site.urls),
     url(r'^$',views.index,name='index'),
+
+
 
 ]

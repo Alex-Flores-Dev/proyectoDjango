@@ -7,7 +7,7 @@ from form import views
 
 
 urlpatterns = [
-    url(r'^formulario/',include(('form.urls','formularios'), namespace='formularios')),
+##    url(r'^formulario/',include(('form.urls','formularios'), namespace='formularios')),
 ##    url(r'^(?P<index>\w+)/$',views.index,name='index'),
 
 
