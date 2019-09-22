@@ -8,7 +8,7 @@ from pagina import views
 
 
 
-def index(request, index):
+def index(request):
     return render(request, 'formularios/index.html')
 
 class vista_formulario(CreateView):

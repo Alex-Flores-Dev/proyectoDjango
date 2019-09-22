@@ -7,6 +7,8 @@ from form import views
 
 
 urlpatterns = [
-    url(r'^(?P<index>\w+)/$',views.index,name='index'),
-    url(r'^nuevo$' ,views.vista_formulario.as_view(),name='formulario'),
+    url(r'^formulario/',include(('form.urls','formularios'), namespace='formularios')),
+##    url(r'^(?P<index>\w+)/$',views.index,name='index'),
+
+
 ]
