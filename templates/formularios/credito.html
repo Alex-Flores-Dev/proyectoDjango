@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+
+
+  {% block credito %}
+  <h1>Busca tu mejor Credito!</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+  </form>
+  {% endblock  %}
+
+  {% block ahorro %}
+  <h5>Busca tu mejor Ahorro!</h5>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Salvar</button>
+
+  </form>
+
+
+  {% endblock  %}

@@ -1,0 +1,96 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inicio</title>
+	<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
+<body>
+
+		<nav id="nav">
+					<ul>
+						{% url 'formularios:credito' as formulario %}
+						<li class="current"><a href="index.html">Inicio</a></li>
+						<li><a href="{{ formulario }}">Busca tu mejor Credito</a></li>
+						<li><a href="ahorro.html">Busca tu mejor Ahorro</a></li>
+					</ul>
+			</nav>
+
+<section id="banner">
+	<header>
+		<h2>Tu Mejor credito <em>Empieza y busca tu mejor credito</a></em></h2>
+		<a href="credito.html" class="button">Buscar ya</a>
+	</header>
+</section>
+
+				<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-pencil-alt"></i>
+							<h3>Registra tu operacion</h3>
+							<p>Registra el tipo de la operacion que deseas realizar.</p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-search"></i>
+							<h3>Compara y elige</h3>
+							<p>Selecciona tu mejor oferta y los terminos que satisfagan tus necesidades</p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-handshake"></i>
+							<h3>Conectate con tu Asesor</h3>
+							<p>Manda tu solicitud y disfruta del mejor servicio</p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<header>
+					<h2>Empieza ahora y busca tu mejor credito?</h2>
+					<a href="#" class="button">Creditos</a>
+				</header>
+			</div>
+		</section>
+
+	<div id="footer" >
+			<div class="container">
+				<div >
+					<section class="col-6 col-12-narrower" >
+						<h3>Contactanos</h3>
+						<form>
+							<div class="row gtr-50">
+								<div class="col-6 col-12-mobilep">
+									<input type="text" name="name" id="name" placeholder="Nombre" />
+								</div>
+								<div class="col-6 col-12-mobilep">
+									<input type="email" name="email" id="email" placeholder="Celular" />
+								</div>
+								<div class="col-12">
+									<textarea name="message" id="message" placeholder="Mensaje" rows="5"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" class="button alt" value="Enviar mensaje" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</section>
+				</div>
+			</div>
+			</div>
+
+
+
+</body>
+</html>

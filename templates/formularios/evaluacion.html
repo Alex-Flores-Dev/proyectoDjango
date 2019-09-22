@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<table>
+  <tbody>
+    {% if Solicitudes %}
+    {% for Solicitud in Solicitudes %}
+    <tr>
+      <td>{{ Solicitud.monto }}</td>
+      <td>{{ Solicitud.tiempo }}</td>
+      <td>{{ Solicitud.mensualidad }}</td>
+    </tr>
+    {% endfor %}
+    {% else %}
+    <h1>No Hay Registros</h1>
+    {% endif %}
+  </tbody>
+</table>
+
+ {% endblock %}

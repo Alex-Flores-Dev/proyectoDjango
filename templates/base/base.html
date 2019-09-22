@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{%block title %}Document {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
+  <body>
+      {% block navbar %}
+        <nav id="nav">
+            <ul>
+              <li class="current"><a href="index.html">Inicio</a></li>
+              <li><a href="{% url 'myapp:credito' %}">Busca tu mejor Credito</a></li>
+              <li><a href="ahorro.html">Busca tu mejor Ahorro</a></li>
+            </ul>
+        </nav>
+
+      {% endblock %}
+
+<div class="container" padding="15px">
+  <table>
+    <tr>
+      <td class="margenes" width="50%" >
+        {% block credito %}
+        <h5>Este es el contenido base </h5>
+        {% endblock %}
+      </td>
+      <td class="margenes" width="50%">
+        {% block ahorro %}
+        <h5>Este es el contenido base </h5>
+        {% endblock %}
+      </td>
+    </tr>
+
+  </table>
+
+</div>
+
+    {% block footer %}
+    <h5></h5>
+    {% endblock %}
+
+  </body>
+</html>
