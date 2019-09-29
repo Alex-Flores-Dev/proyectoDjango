@@ -21,3 +21,21 @@ class FormularioDeSolicitud(forms.ModelForm):
             'mensualidad',
             'producto'
         ]
+
+class FormularioCliente(forms.ModelForm):
+
+
+    nombre=forms.CharField(max_length=20,help_text="Porfavor registra tu nombre")
+    apellido=forms.CharField(max_length=20,help_text="Porfavor registra tu Apellido")
+    celular=forms.CharField(max_length=20,help_text="Porfavor registra tu celular ")
+    correo=forms.CharField(max_length=50,help_text="Porfavor registra tu correo")
+
+    class Meta:
+        model=Cliente
+
+        fields=[
+            'nombre',
+            'apellido',
+            'celular',
+            'correo'
+        ]

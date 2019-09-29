@@ -1,20 +1,25 @@
 {% extends 'base/base.html' %}
 
-{% block content %}
-<table>
-  <tbody>
-    {% if Solicitudes %}
-    {% for Solicitud in Solicitudes %}
-    <tr>
-      <td>{{ Solicitud.monto }}</td>
-      <td>{{ Solicitud.tiempo }}</td>
-      <td>{{ Solicitud.mensualidad }}</td>
-    </tr>
-    {% endfor %}
-    {% else %}
-    <h1>No Hay Registros</h1>
-    {% endif %}
-  </tbody>
+{% block credito %}
+<table class="table table-bordered">
+  <thead>
+    <th >Banco</th>
+    <th>Monto</th>
+    <th>Diferencia</th>
+    <th>Plazo en dias</th>
+
+      {% for result in resultado %}
+      <tr>
+        <td>{{ result.banco }}</td>
+        <td>{{ result.ahorros }}</td>
+        <td>{{ result.diferencia }}</td>
+        <td>{{ result.tiempo }}</td>
+        {% if  result.producto == 1 %}
+          <td><button><a href="{% url 'cliente' %}">Solicitar</a></button></td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+  </thead>
 </table>
 
  {% endblock %}
